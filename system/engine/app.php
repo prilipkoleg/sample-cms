@@ -23,17 +23,17 @@ class App{
 
     function dispatch($action)
     {
-        $method = $action . 'Action'; //метод
-        if(method_exists($this, $method)) // проверяем есть ли такой метод
+        $method = $action . 'Action'; 
+        if(method_exists($this, $method)) 
         {
 			$this->layout->setView($action);
-            $this->$method($action); // вызов методов которые мы задали, для существующих страниц
+            $this->$method($action); 
         } 
     }
 
     private function homeAction(){
         $page_data = array(
-            'title' => 'Главная страница', //ещё немного данных для отображения
+            'title' => 'Главная страница',
             'text' => 'Текст для главной страницы'
         );
 
@@ -105,12 +105,7 @@ class App{
         $data = array_merge($this->document, $page_data);
 
         $this->layout->render($data);
-        //все что тут выше єто должно біть в контролере, мне кажеться дальше нужно на опенкарт переключиться
-        //и с его кодом изучать
-        // я решил убрать с опенкарта все лишнее и оставить отолько движек, по сути то что уже и тут реализовано.
-        // и на основе того что будет  делать сайты.
-        //вообщим по сути регистр не самое главное что нужно понимать, тут больше вопрос в понимании обектов
-        //и как с ними можно работать
+        
     }
 
     private function categoriesAction(){

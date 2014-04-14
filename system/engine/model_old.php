@@ -13,12 +13,7 @@ class ModelOld {
         $result = $this->DataBase->query($sql);
         return $result->rows;
 
-        // а так почемуто не работает
-        /*   parent:: __construct($this->host, $this->user, $this->pass, $this->dbName);
-
-           $sql = "SELECT name FROM author";
-           $result = parent::query($sql);
-           return $result->rows;*/
+        
     }
 
     public function getAuthor($id)

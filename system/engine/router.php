@@ -11,7 +11,6 @@ class Router {
 			$this->path = 'notfound';
 		}
         
-        //echo 'наш путь - ' . $this->path;
     }
 
     public function getPath()
